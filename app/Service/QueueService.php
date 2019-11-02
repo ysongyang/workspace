@@ -29,7 +29,7 @@ class QueueService
      */
     public function push($params, int $delay = 0): bool
     {
-        echo "push".PHP_EOL;
+        echo "push" . PHP_EOL;
         // 这里的 `ExampleJob` 会被序列化存到 Redis 中，所以内部变量最好只传入普通数据
         // 同理，如果内部使用了注解 @Value 会把对应对象一起序列化，导致消息体变大。
         // 所以这里也不推荐使用 `make` 方法来创建 `Job` 对象。
@@ -41,7 +41,7 @@ class QueueService
      */
     public function example($params)
     {
-        echo "example".PHP_EOL;
+        echo "异步执行的代码逻辑" . PHP_EOL;
         // 需要异步执行的代码逻辑
         var_dump($params);
     }
