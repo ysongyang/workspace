@@ -11,7 +11,6 @@ declare(strict_types=1);
 namespace App\Controller\Api\v1;
 
 
-use App\Annotation\AuthAnnotation;
 use App\Service\UserServiceInterface;
 use App\Utlis\Send;
 use Hyperf\Di\Annotation\Inject;

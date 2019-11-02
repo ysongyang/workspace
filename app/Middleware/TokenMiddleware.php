@@ -130,12 +130,12 @@ class TokenMiddleware implements MiddlewareInterface
     public function checkAuthAnnotation(ServerRequestInterface $request): void
     {
         $dispatched = $request->getAttribute(Dispatched::class);
-        //验证路由，是不是想要访问的控制器
         if ($dispatched->status !== Dispatcher::FOUND) {
             return;
         }
         list($class, $method) = $dispatched->handler->callback;
         $classMethodAnnotations = AnnotationCollector::getClassMethodAnnotation($class, $method);
+        //如果存在自定义白名单注解类，则取noAuth属性，为true则表示该方法为白名单，不需要鉴权
         if (isset($classMethodAnnotations[AuthAnnotation::class])) {
             $authAnnotation = $classMethodAnnotations[AuthAnnotation::class];
             $this->noAuth = $authAnnotation->noAuth;
