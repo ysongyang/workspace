@@ -1,0 +1,16 @@
+html {
+    font-size: 1rem
+}
+
+body {
+    overflow-x: hidden;
+    font-weight: 400;
+    padding-top: 3.5rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: Gotham-Book, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+    /*font-family: Microsoft Yahei,"寰蒋闆呴粦","Helvetica Neue",Helvetica,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;*/
+}
+
+a:hover {
+    text-decoration: none
+}

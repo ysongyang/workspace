@@ -49,9 +49,6 @@ class LoginController
     {
         $userName = $request->input('userName', '');
         $passWord = $request->input('passWord', '');
-        if (!$userName || !$passWord) {
-            return Send::sendError(201, '用户名或密码不能为空!');
-        }
         return $this->adminServer->loginByUserName($userName, $passWord);
     }
 
