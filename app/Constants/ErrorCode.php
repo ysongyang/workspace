@@ -1,14 +1,24 @@
 <?php
-/**
- * Notes: PhpStorm.
- * User: ysongyang
- * Site: https://zz1.com.cn
- * Date: 2019/11/1 11:31
- */
+
+declare(strict_types=1);
 
 namespace App\Constants;
 
-class ErrorCode
-{
+use Hyperf\Constants\AbstractConstants;
+use Hyperf\Constants\Annotation\Constants;
 
+/**
+ * @Constants
+ */
+class ErrorCode extends AbstractConstants
+{
+    /**
+     * @Message("500错误，Server Error！")
+     */
+    const SERVER_ERROR = 500;
+
+    /**
+     * @Message("系统参数错误")
+     */
+    const SYSTEM_INVALID = 700;
 }

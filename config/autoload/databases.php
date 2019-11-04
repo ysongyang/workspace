@@ -37,4 +37,23 @@ return [
             ],
         ],
     ],
+    'dingdong'=>[
+        'driver' => env('DB_DRIVER', 'mysql'),
+        'host' => env('DB_HOST2', 'localhost'),
+        'database' => env('DB_DATABASE2', 'hyperf'),
+        'port' => env('DB_PORT', 3306),
+        'username' => env('DB_USERNAME2', 'root'),
+        'password' => env('DB_PASSWORD2', ''),
+        'charset' => env('DB_CHARSET', 'utf8'),
+        'collation' => env('DB_COLLATION', 'utf8_unicode_ci'),
+        'prefix' => env('DB_PREFIX2', ''),
+        'pool' => [
+            'min_connections' => 1,
+            'max_connections' => 10,
+            'connect_timeout' => 10.0,
+            'wait_timeout' => 3.0,
+            'heartbeat' => -1,
+            'max_idle_time' => (float) env('DB_MAX_IDLE_TIME', 60),
+        ],
+    ],
 ];

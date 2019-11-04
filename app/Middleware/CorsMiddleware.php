@@ -19,6 +19,7 @@ class CorsMiddleware implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+
         $response = Context::get(ResponseInterface::class);
         $response = $response
             ->withHeader('Access-Control-Allow-Origin', '*')
@@ -31,7 +32,6 @@ class CorsMiddleware implements MiddlewareInterface
         if ($request->getMethod() == 'OPTIONS') {
             return $response;
         }
-
         return $handler->handle($request);
     }
 }

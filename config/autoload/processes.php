@@ -12,5 +12,6 @@ declare(strict_types=1);
 
 return [
     Hyperf\AsyncQueue\Process\ConsumerProcess::class,
-    App\Process\AsyncQueueConsumer::class
+    App\Process\AsyncQueueConsumer::class,
+    Hyperf\Crontab\Process\CrontabDispatcherProcess::class,  //启动任务调度器进程
 ];

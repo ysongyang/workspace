@@ -39,7 +39,11 @@
         "hyperf/view": "^1.1",
         "smarty/smarty": "^3.1",
         "hyperf/task": "^1.1",
-        "hyperf/async-queue": "^1.1"
+        "hyperf/async-queue": "^1.1",
+        "hyperf/crontab": "^1.1",
+        "hyperf/constants": "^1.1",
+        "hyperf/rpc-server": "^1.1",
+        "hyperf/rpc-client": "^1.1"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "^4.2",
